@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import DataGrid from 'react-data-grid';
+import { DataGrid } from 'react-data-grid';
 import * as XLSX from 'xlsx';
 import { Save, Plus, Trash2 } from 'lucide-react';
 
