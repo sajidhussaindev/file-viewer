@@ -30,6 +30,11 @@ export default function ImageEditor({ file, onSave }: ImageEditorProps) {
 
       // Load the image
       fabric.Image.fromURL(file.url, (img) => {
+        // Check if canvas is still valid before rendering
+        if (!fabricCanvas.contextContainer) {
+          return;
+        }
+
         // Scale image to fit canvas
         const scale = Math.min(
           fabricCanvas.width! / img.width!,
